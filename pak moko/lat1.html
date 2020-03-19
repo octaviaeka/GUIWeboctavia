@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="vue.js"></script>
+</head>
+<body>
+    
+    <div id="app">
+        <!-- <input type="text" v-bind:value="message"></input> -->
+        <input type="text" v-model:value="message"></input>
+
+        <p>{{message}}</p>
+    </div>
+    <!-- <textarea cols="30" rows="10"></textarea> -->
+    <!-- <div id="app">
+        {{pesan}}
+    </div> -->
+
+    <script>
+        // var app= new Vue({
+        //     el: '#app',
+        //     data: {
+        //         pesan: 'Hai, ini value'
+        //     }
+        // })
+
+        var app= new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello world!',
+                pesan: 'hallo ini value'
+            }
+        })
+    </script>
+</body>
+</html>

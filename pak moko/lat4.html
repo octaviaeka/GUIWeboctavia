@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .header{
+            height: 50px;
+            width: 100%;
+            background-color: black;
+            position: fixed;
+            top:0;
+            left: 0;
+            padding: 5px;
+        }
+        .header h1{
+            font-size: large;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: antiquewhite;
+        }
+        .kiri{
+            width: 70%;
+            height: 300px;
+            float: left;
+            background-color: rgb(0, 139, 132);
+            margin-top: 100px;
+            margin-left: 5px;
+        }
+        .kanan{
+            width: 29.25%;
+            height: 500px;
+            float: right;
+            background-color: rgb(255, 0, 212);
+            margin-top: 100px;
+            margin-right: 5px;
+        }
+        .kotak{
+            border: 1px solid black;
+            width: 300px;
+            height: 200px;
+            background-size: cover;
+            float: left;
+            margin-left: 5px;
+            margin-right: 5px;
+            box-shadow: 5px 5px 2px 0px rgb(0, 21, 209);
+        }
+        .kotak2{
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+            background-size: cover;
+            float: left;
+            margin-left: 5px;
+            margin-right: 5px;
+            box-shadow: 5px 5px 2px 0px rgb(0, 21, 209);
+        }
+        .bawah{
+            margin-top: 210px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Vokasi pedia</h1>
+    </div>
+    <div class="kiri">
+        <h1>IKAN</h1>
+        <div id="container">
+        <div id="app">
+        <div v-for="motorku in motor">
+            <div class="kotak">
+                <img v-bind:src="motorku.image" >
+            </div>
+            {{motorku.merek}}
+        </div>
+        </div>
+        </div>
+    </div>
+    <div class="kanan">
+        <p>keranjang belanja</p>
+        {{motorku.merek}}
+    </div>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: '#container',
+            data: {
+                motor:[
+                    {merek:'koki', harga:5500000, image:'ikan1.jpg'},
+                    {merek:'cupang', harga:1500000, image:'ikan2.jpg'},
+                    {merek:'lohan', harga:3300000, image:'ikan3.jpg'}
+                ],
+                keranjangharga:[],
+                keranjangmerek:[]
+            },
+
+            methods:{
+                addCart:function(merek,harga) {
+                    this.keranjangharga.push(harga)
+                    this.keranjangmerek.push(merek)
+                },
+                removeCart:function(index) {
+                    this.keranjangharga.splice(index,1)
+                    this.keranjangmerek.splice(index,1)
+                },
+            }
+        })
+    </script>
+</body>
+</html>

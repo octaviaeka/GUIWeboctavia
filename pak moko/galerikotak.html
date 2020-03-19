@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            background-image: url("ikan1.jpg");
+            /* background-color: blue; */
+            width: 457px;
+            height: 300px;
+            background-size: cover;
+        }
+        .kotak{
+            border: 3px solid black;
+            width: 450px;
+            height: 100px;
+            background-size: cover;
+        }
+        .warna{
+            width: 100px;
+            height: 75px;
+            float: left;
+            margin: 4px 4px 4px 4px;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="berubah"> </div>
+    <!-- <div class="kotak" style="text-align: center;">
+        <div class="warna" type="button" id="kotak" onclick="biru()" style="border: 2px solid blue;"></div>
+        <div class="warna" type="button" id="kotak" onclick="hitam()" style="border: 2px solid black;"></div>
+        <div class="warna" type="button" id="kotak" onclick="kuning()" style="border: 2px solid yellow;"></div>
+        <div class="warna" type="button" id="kotak" onclick="hijau()" style="border: 2px solid green;"></div>
+    </div> -->
+    <div class="kotak" style="text-align: center;">
+        <div class="warna" type="button" id="kotak" onclick="biru()" style="background-image: url(ikan1.jpg);"></div>
+        <div class="warna" type="button" id="kotak" onclick="hitam()" style="background-image: url(ikan2.jpg);"></div>
+        <div class="warna" type="button" id="kotak" onclick="kuning()" style="background-image: url(ikan3.jpg);"></div>
+        <div class="warna" type="button" id="kotak" onclick="hijau()" style="background-image: url(ikan4.jpg);"></div>
+    </div>
+    <script>
+        function biru(){
+            document.getElementById('berubah').style.backgroundImage="url(ikan1.jpg)";
+        }
+        function hitam(){
+            document.getElementById('berubah').style.backgroundImage="url(ikan2.jpg)";
+        }
+        function kuning(){
+            document.getElementById('berubah').style.backgroundImage="url(ikan3.jpg)";
+        }
+        function hijau(){
+            document.getElementById('berubah').style.backgroundImage="url(ikan4.jpg)";
+        }
+    </script>
+</body>
+</html>

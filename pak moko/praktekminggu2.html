@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+
+.main{
+    background-image: url(bg.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    padding: 50px 0px 50px 0px;
+}
+.container{
+    border: 5px double black;
+    width: 720px;
+    height: 1600px;
+    margin: 0px auto;
+    /* padding: 30px 30px 30px 30px; */
+    position: relative;
+    /* background-color: rgb(180, 255, 180); */
+    background-color: #fdf6f6;
+    border-radius: 30px;
+}
+
+.judul{
+    /* border: 3px dashed brown; */
+    width: 600px;
+    height: 65px;
+    box-sizing: border-box;
+    margin: 30px auto 0px auto;
+    padding-top: 1px;
+    background-color: rgb(245, 40, 40);
+}
+
+.menu{
+    /* border: 3px dashed brown; */
+    /* background-color: brown; */
+    width: 600px;
+    height: 50px;
+    margin: 0px auto 0px auto;
+    padding-top: 50px;
+}
+
+.banner{
+    height: 400px;
+    width: 600px;
+    box-sizing: border-box;
+    margin: 20px auto 0px auto;
+    border-radius: 10px;
+    background-size: cover;
+}
+
+.mainkonten{
+    background-color: rgb(245, 40, 40);
+    margin: auto 40px auto 40px;
+    border-radius: 10px;
+}
+.judulartikel{
+    /* border: 3px dashed brown; */
+    /* background-color: brown; */
+    padding-top: 5px;
+    width: 540px;
+    height: 45px;
+    margin: 20px auto 0px auto;
+}
+
+.konten{
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 540px;
+    height: 180px;
+    overflow: auto;
+    margin: 0px auto 0px auto;
+
+}
+
+.konten img{
+    float: left;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+}
+
+.footer{
+    width: 720px;
+    height: 60px;
+    background-color: rgb(118, 102, 226);
+    border-bottom-left-radius: 26px;
+    border-bottom-right-radius: 26px;
+    margin: 549px auto auto 0px;
+    padding-top: 40px;
+}
+
+.logo{
+    background-image: url(rsz_logo.png);
+    width: 100px;
+    height: 117px;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+}
+
+.layarkaca{
+    width: 400px;
+    height: 100px;
+    position: absolute;
+    top: 10px;
+    left: 70;
+    background-color:  black;
+    opacity: 0.5; /*transparancy*/
+}
+
+.btfix{
+    width : 150px;
+    height: 100px;
+    background-color: yellow;
+    left: 1180px;
+    top: 10px;
+    border-radius: 25px;
+    position: fixed;
+
+}
+
+.reseplain{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+    margin: 50px 5px 5px 15px;
+    width: 140px;
+    float: left;
+    background-size: cover;
+    border-radius: 3px
+}
+
+.judulreseplain{
+    margin-top: 145px;
+    width: 140px;
+    height: 34px;
+    background-color: rgba(0, 0, 0, 0.685);
+}
+
+.kotak{
+    width: 100px;
+    height: 100px;
+    background-color: chartreuse;
+    bottom: 10px;
+    left: 10px;
+    position: relative;
+}
+
+.kotak2{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    bottom: 10px;
+    left: 10px;
+    position: relative;
+}
+a{
+    color: rgb(235, 25, 25);
+    font-weight: 600;
+}
+
+.reseplain p{
+    color: white;
+}
+
+h1{
+    font-family : Impact, Charcoal, sans-serif
+}
+
+p {
+    font-family : “Lucida Sans Unicode”, “Lucida Grande”, sans-serif
+  }
+
+.judulartikel p{
+    font-family : Impact, Charcoal, sans-serif
+}
+
+        html, body, div, span, applet, object, iframe,
+blockquote, pre,
+abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+    </style>
+</head>
+<body >
+    
+    <div class="btfix" style="text-align: center;">
+        <br><button type="button" id="btn" onclick="ubahwarna_dark()"> mode malam hari </button><br><br>
+        <button type="button" id="btn" onclick="ubahwarna_light()"> mode siang hari </button>
+    </div>
+<div class="main">
+    <div class="container" id="main">
+        <div class="logo">
+        </div>
+        <div class="judul" id="konten">
+            <h1 style="text-align:center" >Website Resep Masakan</h1>
+        </div>
+        <div class="menu">
+            <a  href="#">HOME</a>&nbsp;&nbsp;
+            <a href="#">ABOUT US</a>&nbsp;&nbsp;
+            <a href="#">CONTACT US</a>&nbsp;&nbsp;
+        </div>
+        <div class="banner" style="text-align:center;background-image: url(cookies.jpg);">
+        </div>
+        
+        <div class="mainkonten" id="konten2">
+        <div class="judulartikel" >
+            <p>Langkah - langkah :</p>
+        </div>
+        <div class="konten">
+            <img src="cookies2.jpg">
+            <p>&nbsp Campur margarin dan coklat bubuk.<br>&nbsp Cairkan pake cara di tim, sisihkan sampai dingin
+                Panaskan teflon dan beri tatakan panci
+                <br>&nbsp &nbsp 1. Campur bahan kering sampai rata<br>
+                <br>&nbsp &nbsp 2. Masukkan adonan basah ke adonan kering,aduk sampai rata. Bisa ditambah air sedikit agar bs menyatu rata dan kalis<br>
+                <br>3. Buat adonan bulat2 kecil, aku timbang masing2 10gr. Kemudian pipihkan sedikit dan rapikan lalu tekan menggunakan garpu<br>
+                <br>4. Siapkan loyang bulat (aku pake loyang kue diameter 20cm). Olesi dg sedikit margarin, beri alas kertas roti.<br>
+                <br>5. Tata adonan beri jarak antar cookies. Panggang kurleb 30-45 menit atau sampai cookies agak kering. Angkat dan dinginkan. Lakukan sampai adonan habis. Me jd 29 cookies.</p>
+        </div>
+        <br><br><br>
+        </div>
+        <br><br>
+
+        <div style="margin-left: 35px;">
+        <div class="reseplain" style="background-image: url(menu1.jpg);height: 180px;">
+            <div class="judulreseplain">
+                <center><p>Creme Caramel</p></center>
+            </div>
+        </div>
+            <div class="reseplain" style="background-image: url(menu2.jpg);height: 180px;">
+                <div class="judulreseplain">
+                    <center><p>Custard Tart</p></center>
+                </div>
+            </div>
+            <div class="reseplain" style="background-image: url(menu3.jpg);height: 180px;">
+                <div class="judulreseplain">
+                    <center><p>Macaron</p></center>
+                </div>
+            </div>
+            <div class="reseplain" style="background-image: url(menu4.jpeg);height: 180px;">
+                <div class="judulreseplain">
+                    <center><p>Croissant</p></center>
+                </div>
+            </div>
+            <div class="reseplain" style="background-image: url(menu1.jpg);height: 180px;">
+                <div class="judulreseplain">
+                    <center><p>Creme Caramel</p></center>
+                </div>
+            </div>
+                <div class="reseplain" style="background-image: url(menu2.jpg);height: 180px;">
+                    <div class="judulreseplain">
+                        <center><p>Custard Tart</p></center>
+                    </div>
+                </div>
+                <div class="reseplain" style="background-image: url(menu3.jpg);height: 180px;">
+                    <div class="judulreseplain">
+                        <center><p>Macaron</p></center>
+                    </div>
+                </div>
+                <div class="reseplain" style="background-image: url(menu4.jpeg);height: 180px;">
+                    <div class="judulreseplain">
+                        <center><p>Croissant</p></center>
+                    </div>
+                </div>
+        </div>
+        
+        <div class="footer" id="footer">
+            <center><p> copyright @ octavia</p></center>
+        </div>
+    </div>
+    </div>
+    <!-- <div class="kotak" type="button" id="kotak" onmousedown="berubah()" onmouseup="berubah2()"></div> -->
+    
+    <script>
+        function ubahwarna_dark(){
+            document.getElementById('konten').style.backgroundColor="black";
+            document.getElementById('konten').style.color="white";
+            document.getElementById('konten2').style.backgroundColor="black";
+            document.getElementById('konten2').style.color="white";
+            document.getElementById('main').style.backgroundColor="gray";
+            document.getElementById('main').style.transition="2s";
+            document.getElementById('konten2').style.transition="2s";
+            document.getElementById('konten').style.transition="2s";
+            document.getElementById('footer').style.transition="2s";
+            document.getElementById('footer').style.backgroundColor="black";
+            document.getElementById('footer').style.color="white";
+            // document.getElementById('konten').style.border="10px dashed purple"
+        }
+        function ubahwarna_light(){
+            document.getElementById('konten').style.backgroundColor="rgb(245, 40, 40)";
+            document.getElementById('konten').style.color="black";
+            document.getElementById('konten2').style.backgroundColor="rgb(245, 40, 40)";
+            document.getElementById('konten2').style.color="black";
+            document.getElementById('main').style.backgroundColor="#fdf6f6";
+            document.getElementById('footer').style.backgroundColor="rgb(118, 102, 226)";
+            document.getElementById('footer').style.color="black";
+        }
+        // function nama_menu(){
+        //     document.getElementById('nama_menu').className="judulreseplain2";
+        // }
+        // function nama_menu2(){
+        //     document.getElementById('nama_menu').className="judulreseplain";
+        // }
+        function berubah(){
+            document.getElementById('kotak').className="kotak2";
+        }
+        function berubah2(){
+            document.getElementById('kotak').className="kotak";
+        }
+    </script>
+</body>
+</html>

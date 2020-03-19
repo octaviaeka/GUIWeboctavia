@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+                html, body, div, span, applet, object, iframe,
+h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+        .sidebar{      
+            background-color: blueviolet;
+            width: 200px;
+            height: 100%;
+            position: fixed;
+            transition: 1s;
+        }
+
+        .sidebar2{      
+            background-color: blueviolet;
+            width: 0;
+            height: 0%;
+            transition: 0.5s;
+            position: fixed;
+            overflow:auto;
+        }
+
+        .main{
+            background-color:darkkhaki;
+            margin-left: 200px;
+            transition: 1s;
+        }
+
+        .main2{
+            background-color:darkkhaki;
+            margin-left: 0px;
+            transition: 0.5s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="sidebar2" id="sidebar">
+        <span style="font-size: 30px;cursor: pointer;" onclick="closeNav()">X</span>
+        <ul>
+            <li>Home</li>
+            <li>Profil</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="main2" id="main">
+        <span style="font-size: 30px;cursor: pointer;" onclick="openNav()">&#9776;</span>
+        <h1>Ini konten utama</h1>
+    </div>
+
+    <script>
+        function closeNav(){
+            document.getElementById('sidebar').className="sidebar2";
+            document.getElementById('main').className="main2";
+        }
+        function openNav(){
+            document.getElementById('sidebar').className="sidebar";
+            document.getElementById('main').className="main";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .muncul{
+            display: none;
+            width: 100%;
+            height: 100%;
+        }
+        .muncul3{
+            display: block;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 100px;
+            left: 0;
+            top: 0;
+            
+        }
+        .muncul2{
+            width: 80%;
+            height: 70px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="muncul" id="muncul">
+        <div class="muncul2"  ><h3> isi kotak <span style="float: right; cursor: pointer;" onclick="tutup()">X</span></h3></div>
+    </div>
+        <h1>Contoh Modal</h1>
+        <button id="tambah" style="cursor: pointer;"onclick="tambahdata()">Tambah Data Baru</button>
+
+        
+    <script>
+        function tambahdata(){
+            document.getElementById('muncul').className="muncul3";
+        }
+        function tutup(){
+            document.getElementById('muncul').className="muncul";
+        }
+    </script>
+</body>
+</html>
